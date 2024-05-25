@@ -3,6 +3,7 @@ import { FormContainer } from './components/formContainer';
 import { ContactDetails } from './contactDetails';
 import { SalaryDetails } from './salaryDetails';
 import { FormNavigation } from './components/navigation';
+import { ReviewDetails } from './reviewDetails';
 
 export type FormData = {
   fullName: string;
@@ -24,14 +25,12 @@ export const Form = () => {
 
   const [formStep, setFormStep] = useState<FormStep>('contactDetails');
 
-
-
   return (
     <FormContainer>
-      <h1 className="text-3xl font-bold underline">Form</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Form</h1>
       { formStep === 'contactDetails' && <ContactDetails formData={formData} setFormData={setFormData} /> }
       { formStep === 'salaryDetails' && <SalaryDetails formData={formData} setFormData={setFormData} /> }
-      { formStep === 'review' && <pre>{JSON.stringify(formData, null, 2)}</pre> }
+      { formStep === 'review' && <ReviewDetails formData={formData} /> }
       <FormNavigation formStep={formStep} setFormStep={setFormStep} />
 
     </FormContainer>

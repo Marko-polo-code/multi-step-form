@@ -1,4 +1,6 @@
 import { FormData } from ".";
+import { Input } from "@/components/ui/input"
+
 
 type ContactDetailsProps = {
   formData: FormData;
@@ -9,9 +11,12 @@ export const ContactDetails = ({formData, setFormData}: ContactDetailsProps) => 
 
   return (
 
+
     <div className="mt-8">
+      <h1 className="text-2xl font-bold mb-4 text-center">Contact Details</h1>
+
       <label htmlFor="fullName">Full Name</label>
-      <input
+      <Input
         type="text"
         id="fullName"
         value={formData.fullName}
@@ -20,7 +25,7 @@ export const ContactDetails = ({formData, setFormData}: ContactDetailsProps) => 
       />
 
       <label htmlFor="email">Email</label>
-      <input
+      <Input
         type="email"
         id="email"
         value={formData.email}
@@ -29,7 +34,7 @@ export const ContactDetails = ({formData, setFormData}: ContactDetailsProps) => 
       />
 
       <label htmlFor="phoneNumber">Phone Number</label>
-      <input
+      <Input
         type="tel"
         id="phoneNumber"
         value={formData.phoneNumber}

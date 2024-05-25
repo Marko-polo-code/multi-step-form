@@ -1,4 +1,5 @@
 import { FormStep } from '../index';
+import { Button } from '@/components/ui/button';
 
 type Props = {
   formStep: FormStep;
@@ -27,9 +28,9 @@ export const FormNavigation = ({formStep, setFormStep}: Props) => {
   }
 
   return (
-    <div>
-      <button onClick={handleBack} disabled={formStep === 'contactDetails' ? true : false}>Back</button>
-      <button onClick={handleNext}>{formStep === 'review' ? 'Submit' : 'Next'}</button>
+    <div className="flex space-x-4 mt-8">
+      { formStep !== 'contactDetails' && <Button variant="outline" onClick={handleBack}>Back</Button> }
+      <Button variant="default" onClick={handleNext}>{formStep === 'review' ? 'Submit' : 'Next'}</Button>
     </div>
   );
 }

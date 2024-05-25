@@ -1,23 +1,56 @@
 import { FormData } from ".";
+import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+
 
 type SalaryDetailsProps = {
   formData: FormData;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>
 };
 
+
 export const SalaryDetails = ({formData, setFormData}: SalaryDetailsProps) => {
+
+  const handleSalaryChange = ( value: string ) => {
+    setFormData({ ...formData, salary: value });
+  }
 
   return (
 
-    <div className="mt-8">
-      <label htmlFor="salary">Salary</label>
-      <input
-        type="radio"
-        id="Salary"
-        value={formData.salary}
-        onChange={(e) => setFormData({ ...formData, salary: e.target.value })}
-        className="block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-      />
+    <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 bg-white shadow-md rounded-lg border border-gray-200">
+
+      <h1 className="text-2xl font-bold mb-4 text-center">Salary Details</h1>
+
+      <div className="space-y-4">
+
+        <p>What is your salary range?</p>
+        <RadioGroup
+          defaultValue="option-one"
+          onValueChange={handleSalaryChange}
+          >
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="0 - 1000" id="Salary-1"/>
+            <Label htmlFor="0 - 1000">0 - 1000</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="1000 - 2000" id="Salary-2" />
+            <Label htmlFor="1000 - 2000">1000 - 2000</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="2000 - 3000" id="Salary-3" />
+            <Label htmlFor="2000 - 3000">2000 - 3000</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="3000 - 4000" id="Salary-4" />
+            <Label htmlFor="3000 - 4000">3000 - 4000</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="Mehr als 4000" id="Salary-5" />
+            <Label htmlFor="Mehr als 4000">Mehr als 4000</Label>
+          </div>
+        </RadioGroup>
+
+      </div>
 
     </div>
 
