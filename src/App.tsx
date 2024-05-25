@@ -1,9 +1,9 @@
-import { FormContainer } from './features/form/components/progressBar/formContainer';
+import { Form } from './features/form';
 
 
 function App() {
 
-  return <FormContainer />
+  return <Form />
 }
 
 export default App
