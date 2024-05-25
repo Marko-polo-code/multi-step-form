@@ -4,6 +4,7 @@ import { ContactDetails } from './contactDetails';
 import { SalaryDetails } from './salaryDetails';
 import { FormNavigation } from './components/navigation';
 import { ReviewDetails } from './reviewDetails';
+import { ProgressBar } from './components/progressBar';
 
 export type FormData = {
   fullName: string;
@@ -28,6 +29,7 @@ export const Form = () => {
   return (
     <FormContainer>
       <h1 className="text-2xl font-bold mb-4 text-center">Form</h1>
+      <ProgressBar formStep={formStep} />
       { formStep === 'contactDetails' && <ContactDetails formData={formData} setFormData={setFormData} /> }
       { formStep === 'salaryDetails' && <SalaryDetails formData={formData} setFormData={setFormData} /> }
       { formStep === 'review' && <ReviewDetails formData={formData} /> }
