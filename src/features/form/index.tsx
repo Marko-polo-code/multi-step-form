@@ -27,8 +27,10 @@ export const Form = () => {
   const [formStep, setFormStep] = useState<FormStep>('contactDetails');
 
   return (
+    <div className='flex w-full justify-center py-32'>
+
     <FormContainer>
-      <h1 className="text-2xl font-bold mb-4 text-center">Form</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Buena Registration</h1>
       <ProgressBar formStep={formStep} />
       { formStep === 'contactDetails' && <ContactDetails formData={formData} setFormData={setFormData} /> }
       { formStep === 'salaryDetails' && <SalaryDetails formData={formData} setFormData={setFormData} /> }
@@ -36,5 +38,6 @@ export const Form = () => {
       <FormNavigation formStep={formStep} setFormStep={setFormStep} />
 
     </FormContainer>
+    </div>
   );
 }

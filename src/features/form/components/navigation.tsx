@@ -29,8 +29,8 @@ export const FormNavigation = ({formStep, setFormStep}: Props) => {
 
   return (
     <div className="flex space-x-4 mt-8">
-      { formStep !== 'contactDetails' && <Button variant="outline" onClick={handleBack}>Back</Button> }
-      <Button variant="default" onClick={handleNext}>{formStep === 'review' ? 'Submit' : 'Next'}</Button>
+      { formStep !== 'contactDetails' && <Button variant="outline" size={"lg"} className='text-lg' onClick={handleBack}>Back</Button> }
+      <Button variant="default" size={"lg"} className='text-lg' onClick={handleNext}>{formStep === 'review' ? 'Submit' : 'Next'}</Button>
     </div>
   );
 }
