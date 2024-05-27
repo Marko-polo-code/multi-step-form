@@ -1,9 +1,15 @@
+import { Toaster } from './components/ui/toaster';
 import { Form } from './features/form';
 
 
 function App() {
 
-  return <Form />
+  return (
+  <>
+    <Form />
+    <Toaster />
+  </>
+)
 }
 
 export default App

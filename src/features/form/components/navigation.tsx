@@ -1,12 +1,15 @@
 import { FormStep } from '../index';
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/components/ui/use-toast';
 
 type Props = {
   formStep: FormStep;
   setFormStep: React.Dispatch<React.SetStateAction<FormStep>>;
+  validate: () => boolean;
 };
 
-export const FormNavigation = ({formStep, setFormStep}: Props) => {
+export const FormNavigation = ({formStep, setFormStep, validate}: Props) => {
+  const { toast } = useToast();
 
   const handleBack = () => {
     if (formStep === 'contactDetails') return;
@@ -21,9 +24,14 @@ export const FormNavigation = ({formStep, setFormStep}: Props) => {
   const handleNext = () => {
     if (formStep === 'contactDetails') {
       setFormStep('salaryDetails');
-    }
-    if (formStep === 'salaryDetails') {
+    } else if (formStep === 'salaryDetails') {
       setFormStep('review');
+    } else if (formStep === 'review') {
+      if (validate()) {
+        toast({ title: 'Congratulations! Your form has been submitted successfully' });
+      } else {
+        toast({ title: 'Form validation failed. Please check your inputs.', variant: 'destructive' });
+      }
     }
   }
 
