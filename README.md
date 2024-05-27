@@ -22,7 +22,7 @@ To install and run this application locally, follow these steps:
 
 1. **Clone the repository**
 
-    - git clone https://github.com/yourusername/multi-page-form.git
+    - git clone https://github.com/yourusername/multi-page-form.git  (change the username with yours)
     - cd multi-page-form
 
 2. **Install Dependencies**
