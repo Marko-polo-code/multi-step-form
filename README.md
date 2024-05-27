@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a multi-page form application built with Vite, React, and TypeScript. The application allows users to fill in their contact details, salary details, and review their information before submission. It includes components built with Shadcn, form validation using Zod, and unit testing with Vitest.
+This is a multi-page form application built with Vite, React, and TypeScript. The application allows users to fill in their contact details, salary details, and review their information before submission. It includes UI components built with Shadcn library, form validation using Zod, and unit testing with Vitest.
 
 ## Features
 
