@@ -22,8 +22,8 @@ To install and run this application locally, follow these steps:
 
 1. **Clone the repository**
 
-    git clone https://github.com/yourusername/multi-page-form.git
-    cd multi-page-form
+    - git clone https://github.com/yourusername/multi-page-form.git
+    - cd multi-page-form
 
 2. **Install Dependencies**
 
@@ -34,34 +34,33 @@ To install and run this application locally, follow these steps:
     npm run dev
 
 
-
 ## Usage
 
   Once the development server is running, you can access the application in your browser at http://localhost:3000.
 
-  **Form Steps**
+  Form Steps
 
     Contact Details
 
-      - Full Name
-      - Email
-      - Phone Number
-      - Salary Details
+    - Full Name
+    - Email
+    - Phone Number
+    - Salary Details
 
     Salary Range
 
     Review Details
-      - Review and confirm the entered information
+    Review and confirm the entered information
 
-  **Navigation**
+  Navigation
 
-      - Use the Next button to proceed to the next step.
-      - Use the Back button to go back to the previous step.
-      - On the final review step, submit the form to receive a success message.
+    Use the Next button to proceed to the next step.
+    - Use the Back button to go back to the previous step.
+    - On the final review step, submit the form to receive a success message.
 
 
 ## Testing
 
   This project uses Vitest for unit testing. To run the tests, use the following command:
 
-    npm test
+      npm test
