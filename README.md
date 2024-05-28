@@ -22,8 +22,8 @@ To install and run this application locally, follow these steps:
 
 1. **Clone the repository**
 
-    - git clone https://github.com/Marko-polo-code/multi-page-form.git
-    - cd multi-page-form
+    - git clone https://github.com/Marko-polo-code/multi-step-form.git
+    - cd multi-step-form
 
 2. **Install Dependencies**
 
