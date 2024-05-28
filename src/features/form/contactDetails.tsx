@@ -5,9 +5,10 @@ import { Input } from "@/components/ui/input"
 type ContactDetailsProps = {
   formData: FormData;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>
+  errors: Partial<FormData>;
 };
 
-export const ContactDetails = ({formData, setFormData}: ContactDetailsProps) => {
+export const ContactDetails = ({formData, setFormData, errors}: ContactDetailsProps) => {
 
   return (
 
@@ -23,6 +24,8 @@ export const ContactDetails = ({formData, setFormData}: ContactDetailsProps) => 
         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
         className="block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 mb-4"
       />
+      {errors.salary && <span className="error">{errors.salary}</span>}
+
 
       <label htmlFor="email" className="text-lg pb-2">Email</label>
       <Input
@@ -32,6 +35,7 @@ export const ContactDetails = ({formData, setFormData}: ContactDetailsProps) => 
         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         className="block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 mb-4"
       />
+      {errors.email && <span className="error">{errors.email}</span>}
 
       <label htmlFor="phoneNumber" className="text-lg pb-2">Phone Number</label>
       <Input
@@ -41,6 +45,7 @@ export const ContactDetails = ({formData, setFormData}: ContactDetailsProps) => 
         onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
         className="block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
       />
+      {errors.phoneNumber && <span className="error">{errors.phoneNumber}</span>}
     </div>
 
   );

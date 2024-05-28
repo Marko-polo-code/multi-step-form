@@ -6,10 +6,11 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 type SalaryDetailsProps = {
   formData: FormData;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+  errors: Partial<FormData>;
 };
 
 
-export const SalaryDetails = ({formData, setFormData}: SalaryDetailsProps) => {
+export const SalaryDetails = ({formData, setFormData, errors}: SalaryDetailsProps) => {
 
   const handleSalaryChange = ( value: string ) => {
     setFormData({ ...formData, salary: value });
@@ -50,7 +51,7 @@ export const SalaryDetails = ({formData, setFormData}: SalaryDetailsProps) => {
             <Label htmlFor="Mehr als 4000" className="text-lg">Mehr als 4000</Label>
           </div>
         </RadioGroup>
-
+        {errors.salary && <span className="error">{errors.salary}</span>}
       </div>
 
     </div>
