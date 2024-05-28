@@ -50,11 +50,11 @@ To install and run this application locally, follow these steps:
     Salary Range
 
     Review Details
-    Review and confirm the entered information
+    - Review and confirm the entered information
 
   Navigation
 
-    Use the Next button to proceed to the next step.
+    - Use the Next button to proceed to the next step.
     - Use the Back button to go back to the previous step.
     - On the final review step, submit the form to receive a success message.
 
